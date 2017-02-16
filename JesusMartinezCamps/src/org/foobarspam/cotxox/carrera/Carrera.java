@@ -11,6 +11,7 @@ public class Carrera {
 	private int tiempoEsperadoMinutos = 10;
 	private String tarjetaCredito = null;
 	private double costeTotal = 0;
+	private double propina = 0 ;
 	
 	/*Constructor*/
 	public Carrera(String tarjetaCredito){
@@ -56,7 +57,9 @@ public class Carrera {
 	public void setCosteTotal(double pago){
 		this.costeTotal = costeTotal + pago;
 	}
-	
+	public void setPropina(double propina){
+		this.propina = propina;
+	}
 	/*interfaz publica*/
 	public double getCosteEsperado(){
 		Tarifa tarifa = new Tarifa(getDistancia());
@@ -76,6 +79,9 @@ public class Carrera {
 	}
 	public void realizarPago(double pago){
 		setCosteTotal(pago);
+	}
+	public void recibirPropina(double propina){
+		setPropina(propina);
 	}
 }
 
