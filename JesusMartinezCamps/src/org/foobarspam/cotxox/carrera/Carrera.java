@@ -60,6 +60,9 @@ public class Carrera {
 	public void setPropina(double propina){
 		this.propina = propina;
 	}
+	public double getPropina(){
+		return this.propina;
+	}
 	/*interfaz publica*/
 	public double getCosteEsperado(){
 		Tarifa tarifa = new Tarifa(getDistancia());
@@ -74,14 +77,15 @@ public class Carrera {
 			
 		//}
 	}
-	public void liberarConductor(PoolConductores conductores){
-		
-	}
+//	public void liberarConductor(PoolConductores conductores){
+//		
+//	}
 	public void realizarPago(double pago){
 		setCosteTotal(pago);
 	}
 	public void recibirPropina(double propina){
 		setPropina(propina);
-	}
+	}	
+	
 }
 
