@@ -5,10 +5,10 @@ public class Tarifa extends Carrera {
 
 	/*atributos*/
 	private double costeMilla = 1.35;
-	private  double costeMinuto = 0.35;
+	private double costeMinuto = 0.35;
 	private double costeMinimo = 5;
-	private  double porcentajeComision = 20;
-	double total = 0;
+	private double porcentajeComision = 20;
+	private double total = 0;
 	
 	public Tarifa(double distancia){
 		super(distancia);
@@ -24,8 +24,8 @@ public class Tarifa extends Carrera {
 	
 	public double calcularCoste(double distancia){
 		total = costeMilla * distancia;
-		if(total < costeMinimo){
-			return getCosteMinino();
+		if(total < 5.0){
+			return 5;
 		}else{
 			return total;
 		}

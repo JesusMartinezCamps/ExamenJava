@@ -79,7 +79,7 @@ public class Cotxox {
 		PoolConductores conductores = new PoolConductores(poolConductores);
 		
 		/* Seleccion del conductor en la flota y asignacion a la carrera */
-				
+
 		carrera.asignarConductor(conductores);
 			
 		// Info por pantalla

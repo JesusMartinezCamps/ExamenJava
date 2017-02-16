@@ -1,4 +1,5 @@
 package org.foobarspam.cotxox.carrera;
+import org.foobarspam.cotxox.conductores.*;
 import org.foobarspam.cotxox.tarifa.*;
 
 public class Carrera {
@@ -9,6 +10,7 @@ public class Carrera {
 	private double distancia = 7.75;
 	private int tiempoEsperadoMinutos = 10;
 	private String tarjetaCredito = null;
+	private double costeTotal = 0;
 	
 	/*Constructor*/
 	public Carrera(String tarjetaCredito){
@@ -17,8 +19,9 @@ public class Carrera {
 	public Carrera(double distancia){
 		this.distancia = distancia;
 	}
-	/*getters setters*/
 	
+	
+	/*getters setters*/
 	public void setOrigen(String origen){
 		this.origen = origen;
 	}
@@ -47,6 +50,14 @@ public class Carrera {
 		return this.tarjetaCredito;
 	}
 
+	public double getCosteTotal(){
+		return this.costeTotal;
+	}
+	public void setCosteTotal(double pago){
+		this.costeTotal = costeTotal + pago;
+	}
+	
+	/*interfaz publica*/
 	public double getCosteEsperado(){
 		Tarifa tarifa = new Tarifa(getDistancia());
 		tarifa.calcularCoste(getDistancia());
@@ -54,5 +65,17 @@ public class Carrera {
 		return tarifa.getCosteTotalEsperado();
 	}
 	
+	public void asignarConductor(PoolConductores conductores){
+		//int total = conductores;
+		//for(int i = 0 ; i < total ;i++){
+			
+		//}
+	}
+	public void liberarConductor(PoolConductores conductores){
+		
+	}
+	public void realizarPago(double pago){
+		setCosteTotal(pago);
+	}
 }
 

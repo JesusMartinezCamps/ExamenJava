@@ -26,4 +26,19 @@ public class CarreraTest {
 //		assertEquals(distanciaEsperada, carrera.getDistancia(),0);
 
 	}
+	
+	@Test
+	public void costeEsperadoTest(){
+		double costeMinimo = 5;
+		
+		Carrera carrera = new Carrera(2);
+		
+		assertEquals(costeMinimo, carrera.getCosteEsperado(),0);
+		
+	}
+	
+	@Test
+	public void realizarPagoTest(){
+		
+	}
 }
