@@ -50,6 +50,7 @@ public class Carrera {
 	public double getCosteEsperado(){
 		Tarifa tarifa = new Tarifa(getDistancia());
 		tarifa.calcularCoste(getDistancia());
+		
 		return tarifa.getCosteTotalEsperado();
 	}
 	

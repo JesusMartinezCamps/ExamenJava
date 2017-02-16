@@ -7,7 +7,11 @@ import org.junit.Test;
 public class ConductorTest {
 
 	@Test
-	public void MatriculaTest() {
+	public void valoracionMediaTest() {
+		int valoracionEsperada = 4;
+		
+		assertEquals(valoracionEsperada,)
+		
 	}
 
 }
